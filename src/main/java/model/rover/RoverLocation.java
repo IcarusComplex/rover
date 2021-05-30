@@ -27,7 +27,12 @@ public class RoverLocation {
         return bearing;
     }
 
-/*
+    @Override
+    public String toString() {
+        return "[" + bearing + "]" + "(" + xCoord + ", " + yCoord + ")";
+    }
+
+    /*
     Movement is executed assuming NORTH as the 0 degree FORWARD bearing.
     Assuming a positional update vector (1, 1) per movement which we can then modify by cardinal direction using
     the dot product of the vectors:
