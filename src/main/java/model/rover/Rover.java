@@ -27,6 +27,11 @@ public class Rover {
         return roverLocation;
     }
 
+    @Override
+    public String toString() {
+        return roverLocation.toString();
+    }
+
     public void executeNavigationCommand(RoverNavigationCommands command){
         switch (command){
             case F -> roverLocation.executeForward();
