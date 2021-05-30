@@ -1,4 +1,4 @@
-package model;
+package model.rover;
 
 import util.CardinalDirection;
 
