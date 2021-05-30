@@ -23,6 +23,10 @@ public class Rover {
         return roverLocation.getBearing();
     }
 
+    public RoverLocation getLocation() {
+        return roverLocation;
+    }
+
     public void executeNavigationCommand(RoverNavigationCommands command){
         switch (command){
             case F -> roverLocation.executeForward();

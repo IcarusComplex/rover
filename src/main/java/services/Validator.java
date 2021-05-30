@@ -1,9 +1,9 @@
 package services;
 
-public interface Validator<T, E extends Throwable> {
+public interface Validator<T, E extends Throwable, R> {
 
     boolean isValid(T toValidate);
 
-    void validate(T toValidate) throws E;
+    R validate(T toValidate) throws E;
 
 }
