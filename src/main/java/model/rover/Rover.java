@@ -5,31 +5,31 @@ import util.RoverNavigationCommands;
 
 public class Rover {
 
-    private int xCoord;
-    private int yCoord;
-
-    private CardinalDirections bearing;
+    private RoverLocation roverLocation;
 
     public Rover(int xCoord, int yCoord, CardinalDirections bearing) {
-        this.xCoord = xCoord;
-        this.yCoord = yCoord;
-        this.bearing = bearing;
+        roverLocation = new RoverLocation(xCoord, yCoord, bearing);
     }
 
     public int getXCoord() {
-        return xCoord;
+        return roverLocation.getXCoord();
     }
 
     public int getYCoord() {
-        return yCoord;
+        return roverLocation.getYCoord();
     }
 
     public CardinalDirections getBearing() {
-        return bearing;
+        return roverLocation.getBearing();
     }
 
     public void executeNavigationCommand(RoverNavigationCommands command){
-
+        switch (command){
+            case F -> roverLocation.executeForward();
+            case B -> roverLocation.executeBackward();
+            case R -> roverLocation.executeRightTurn();
+            case L -> roverLocation.executeLeftTurn();
+        }
     }
 
 }
