@@ -5,7 +5,7 @@ import util.RoverNavigationCommands;
 
 public class Rover {
 
-    private RoverLocation roverLocation;
+    private final RoverLocation roverLocation;
 
     public Rover(int xCoord, int yCoord, CardinalDirections bearing) {
         roverLocation = new RoverLocation(xCoord, yCoord, bearing);
