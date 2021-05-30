@@ -1,5 +1,5 @@
 package util;
 
-public enum CardinalDirection {
+public enum CardinalDirections {
     NORTH, EAST, SOUTH, WEST
 }

@@ -1,15 +1,16 @@
 package model.rover;
 
-import util.CardinalDirection;
+import util.CardinalDirections;
+import util.RoverNavigationCommands;
 
 public class Rover {
 
     private int xCoord;
     private int yCoord;
 
-    private CardinalDirection bearing;
+    private CardinalDirections bearing;
 
-    public Rover(int xCoord, int yCoord, CardinalDirection bearing) {
+    public Rover(int xCoord, int yCoord, CardinalDirections bearing) {
         this.xCoord = xCoord;
         this.yCoord = yCoord;
         this.bearing = bearing;
@@ -23,7 +24,12 @@ public class Rover {
         return yCoord;
     }
 
-    public CardinalDirection getBearing() {
+    public CardinalDirections getBearing() {
         return bearing;
     }
+
+    public void executeNavigationCommand(RoverNavigationCommands command){
+
+    }
+
 }
