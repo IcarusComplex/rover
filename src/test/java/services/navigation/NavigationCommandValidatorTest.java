@@ -15,18 +15,15 @@ public class NavigationCommandValidatorTest {
         validator = new NavigationCommandValidator();
     }
 
-    // TODO expand testing parameters to combinations
     @ParameterizedTest
-    @ValueSource(strings = {"F", "B", "R", "L"})
+    @ValueSource(strings = {"F", "B", "R", "L", "FBRL", "FFBBRRLLFFBBRRLL"})
     public void validNavigationCommands (String command) {
         Assertions.assertTrue(validator.isValid(command));
         Assertions.assertDoesNotThrow(() -> validator.validate(command));
     }
 
-
-    // TODO expand testing parameters to combinations
     @ParameterizedTest
-    @ValueSource(strings = {"A", "C", "D", "E", "G", "H", "I", "J", "K", "M", "N", "O", "P", "Q", "S", "T", "U", "V", "W", "X", "Y", "Z"})
+    @ValueSource(strings = {"A", "C", "D", "E", "G", "H", "I", "J", "K", "M", "N", "O", "P", "Q", "S", "T", "U", "V", "W", "X", "Y", "Z", "FBRLA", "FFZBBGRRTLLE"})
     // Entire alphabet, except FBRL are invalid.
     public void invalidNavigationCommands(String command) {
         Assertions.assertFalse(validator.isValid(command));
