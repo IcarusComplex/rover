@@ -6,6 +6,6 @@ If you have JAVA running on this system, simply run the 'capgemini_rover.jar' fi
 in the base folder of this project and follow the prompts.
 
 Alternatively, if you do not have JAVA installed, follow the instructions here:
-https://www.java.com/en/download/
+https://www.oracle.com/java/technologies/javase-jdk16-downloads.html
 Try running the 'capgemini_rover.jar' again, when you have successfully installed
 JAVA. Please be aware, a system restart may be required.

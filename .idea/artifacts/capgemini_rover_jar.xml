@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="capgemini_rover:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/capgemini_rover_jar</output-path>
-    <root id="archive" name="capgemini_rover.jar">
-      <element id="module-output" name="capgemini_rover" />
-    </root>
-  </artifact>
-</component>
